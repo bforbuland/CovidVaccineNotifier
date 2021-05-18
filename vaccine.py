@@ -1,9 +1,8 @@
-from datetime import datetime
 import requests
 import smtplib
 #import config
 from datetime import date
-
+from datetime import datetime
 
 districtId = 1
 today = date.today().strftime("%d-%m-%y")
