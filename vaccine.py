@@ -1,6 +1,5 @@
 import requests
 import smtplib
-#import config
 from datetime import date
 from datetime import datetime
 
@@ -47,9 +46,9 @@ def send_email(subject,msg):
         server = smtplib.SMTP('smtp.gmail.com:587')
         server.ehlo()
         server.starttls()
-        server.login(config.EMAIL_ADDRESS, config.PASSWORD)
+        server.login(EMAIL_ADDRESS, PASSWORD)
         message= 'Subject: {}\n\n{}'.format(subject, msg)
-        server.sendmail(config.EMAIL_ADDRESS,config.EMAIL_ADDRESS, message)
+        server.sendmail(EMAIL_ADDRESS,EMAIL_ADDRESS, message)
         server.quit()
         print("Email sent successfully.")
     except:
